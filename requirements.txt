@@ -1,0 +1,8 @@
+django
+djangorestframework
+psycopg2-binary
+django-filter
+pytest
+gunicorn
+python-dotenv
+flake8
