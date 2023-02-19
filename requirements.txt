@@ -6,3 +6,4 @@ pytest
 gunicorn
 python-dotenv
 flake8
+django-environ
