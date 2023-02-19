@@ -48,7 +48,7 @@ jobs:
         run: flake8
       
       - name: Тестирование
-        run:  pytest tests.py
+        run:  pytest tests.py -v
         env:
           DB_USER: ${{ env.POSTGRES_USER }}
           DB_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
