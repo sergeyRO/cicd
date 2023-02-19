@@ -24,7 +24,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-print(env("PORT"))
+
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-nw^y+m^
 # wmxza1asgk+)!ua2qx9)g+#v=6%76-9i8i(6eqiw94j'
@@ -35,8 +35,9 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = int(env("DEBUG", default=0))
 
 # ALLOWED_HOSTS = ['*', 'localhost']
-ALLOWED_HOSTS = env("ALLOWED_HOSTS", "").split(",")
-ALLOWED_HOSTS = [] if not any(ALLOWED_HOSTS) else ALLOWED_HOSTS
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
+# ALLOWED_HOSTS = env("ALLOWED_HOSTS", "").split(",")
+# ALLOWED_HOSTS = [] if not any(ALLOWED_HOSTS) else ALLOWED_HOSTS
 
 # Application definition
 
