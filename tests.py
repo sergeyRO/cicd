@@ -1,7 +1,8 @@
-import pytest
+# import pytest
 
 def test_ok():
     assert True
 
-def test_razok():
+
+def test_r():
     assert True
