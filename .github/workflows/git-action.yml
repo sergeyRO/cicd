@@ -6,7 +6,7 @@ on:
     
 jobs:
   tests:
-    run-on: ubuntu-20.04
+    runs-on: ubuntu-20.04
     env:
       POSTGRES_USER: ${{ secrets.DB_USER }}
       POSTGRES_PASS: ${{ secrets.DB_PASSWORD }}
