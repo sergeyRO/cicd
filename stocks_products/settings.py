@@ -36,8 +36,6 @@ DEBUG = int(env("DEBUG", default=0))
 
 # ALLOWED_HOSTS = ['*', 'localhost']
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
-# ALLOWED_HOSTS = env("ALLOWED_HOSTS", "").split(",")
-# ALLOWED_HOSTS = [] if not any(ALLOWED_HOSTS) else ALLOWED_HOSTS
 
 # Application definition
 
@@ -146,7 +144,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
